@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz San Valentin Mi Amorcito❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            color: #d63384;
+            padding-bottom: 200px;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        .container {
+            margin: 50px auto;
+            width: 80%;
+        }
+        .photo-box, .video-box {
+            display: inline-block;
+            width: 45%;
+            margin: 10px;
+            text-align: center;
+        }
+        img, video {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <h1>💖 Para Mi Amor 💖</h1>
+    <audio id="music" loop>
+        <source src="Eres Mas - Guaco (letra).mp3" type="audio/mp3">
+    </audio>
+    <button onclick="playMusic()">🎵 Reproducir Música</button>
+    
+    <div class="container" id="photos"></div>
+    
+    <div class="container">
+        <div class="video-box" id="video1">
+            <video controls>
+                <source src="imagenes/video1.mp4" type="video/mp4">
+            </video>
+
+            <h3>La primera vez que te robe un suspiro</h3>
+           
+        </div>
+        <div class="video-box" id="video2">
+            <video controls>
+                <source src="imagenes/video2.mp4"video/mp4">
+            </video>
+            <h3>Me derretia por ti desde siempre mi amorcito lindo</h3>
+        </div>
+        <div class="video-box" id="video3">
+            <video controls>
+                <source src="imagenes/video3.mp4" type="video/mp4">
+            </video>
+           <h3>Nuestro amor es ardiente ❤‍🔥🔥</h3>
+        </div>
+        <div class="video-box" id="video4">
+            <video controls>
+                <source src="imagenes/video4.mp4"video/mp4">
+            </video>
+            <h3>Tus locuras son mi tipo de locuras y eso me encanta. 🥰</h3>
+            
+        </div>
+<div>
+    <h2>Mi amor, aunque la distancia nos separe, siempre estoy contigo. Te admiro muchísimo por lo fuerte que eres, y quiero que sepas que te amo con todo mi corazón. Siempre tendrás mi apoyo, sin importar lo que pase. Juntos somos invencibles 💖</h2>
+</div>
+        
+    </div>
+    
+    <script>
+        function playMusic() {
+            let music = document.getElementById("music");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+
+        let photoSets = [];
+        for (let i = 0; i < 8; i++) {
+            let set = [];
+            for (let j = 1; j <= 11; j++) {
+                set.push(`imagenes/img${i * 11 + j}.jpg`);
+            }
+            photoSets.push(set);
+        }
+        
+        let allPhrases = [
+            ["Eres mi sueño hecho realidad", "Cada día te amo más", "Tu amor ilumina mi vida", "Eres mi sol en días grises", "Contigo todo es especial", "Te extraño cada segundo", "Eres mi mayor bendición", "Eres mi felicidad eterna", "Mi amor por ti no tiene fin", "Siempre juntos en corazón", "Nuestro amor es infinito"],
+            ["Amarte es lo mejor que me pasó", "Cada momento contigo es mágico", "Eres mi mejor historia de amor", "Nada nos separará jamás", "Eres mi persona favorita", "No hay distancia para este amor", "Tus abrazos son mi refugio", "Siempre serás mi todo", "Cada latido es por ti", "Nuestro amor es único", "Eres mi más bello pensamiento"],
+            ["Siempre estás en mi mente", "Eres el amor de mi vida", "Te llevo en mi corazón", "Cada sonrisa es por ti", "Nuestro amor todo lo puede", "Eres mi alma gemela", "Amarte es mi destino", "Eres mi más dulce inspiración", "Juntos para siempre", "Eres mi amor eterno", "Tu amor me completa"],
+            ["Sueño con el día de verte", "Eres mi mejor regalo", "Sin ti nada es igual", "Siempre juntos, siempre felices", "Eres la melodía de mi corazón", "Cada día te amo más", "Nuestro amor es inquebrantable", "Cada beso en la distancia lo guardo", "Te necesito cada día más", "Eres mi refugio", "Contigo todo tiene sentido"],
+            ["Eres mi paz y mi alegría", "No hay amor más grande", "Somos un solo corazón", "Eres mi razón de vivir", "Te amo sin medida", "Juntos contra todo", "Eres mi más hermosa casualidad", "Nuestro amor es eterno", "Cada momento contigo vale oro", "Eres mi vida", "Te amo más de lo que imaginas"],
+            ["Cada segundo sin ti duele", "Tu amor es mi fortaleza", "Eres mi ángel", "No hay amor como el nuestro", "Tú y yo somos uno", "Te espero con todo mi corazón", "Eres mi destino", "Siempre en mis pensamientos", "Eres lo mejor de mi vida", "Nuestro amor es un milagro", "Te amaré toda la vida"],
+            ["Cada día cuenta contigo", "Eres mi felicidad constante", "Tu amor me da fuerzas", "No hay distancia en el amor", "Eres mi hogar", "Mi corazón es tuyo", "Te llevo en cada suspiro", "Eres mi alegría", "Siempre estaré para ti", "Eres mi razón de sonreír", "Cada te quiero es sincero"],
+            ["Eres mi más linda historia", "Nada nos separará", "Cada día te extraño más", "Eres mi razón de todo", "No puedo dejar de amarte", "Eres mi destino", "Nuestro amor es real", "Eres mi todo", "No importa la distancia", "Siempre juntos", "Te amo con todo mi ser"]
+        ];
+
+        let currentPhotoIndex = new Array(8).fill(0);
+        let photoContainer = document.getElementById("photos");
+        for (let i = 0; i < 8; i++) {
+            let div = document.createElement("div");
+            div.className = "photo-box";
+            div.id = `photo${i + 1}`;
+            div.innerHTML = `
+                <img src="${photoSets[i][0]}" alt="Foto especial">
+                <p>${allPhrases[i][0]}</p>
+                <button onclick="changePhoto(${i + 1})">💖 Cambiar</button>
+            `;
+            photoContainer.appendChild(div);
+        }
+        
+        function changePhoto(index) {
+            currentPhotoIndex[index - 1] = (currentPhotoIndex[index - 1] + 1) % photoSets[index - 1].length;
+            document.querySelector(`#photo${index} img`).src = photoSets[index - 1][currentPhotoIndex[index - 1]];
+            document.querySelector(`#photo${index} p`).innerText = allPhrases[index - 1][currentPhotoIndex[index - 1]];
+        }
+    </script>
+</body>
+</html>
